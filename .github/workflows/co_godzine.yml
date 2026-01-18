@@ -2,8 +2,8 @@ name: Playwright Tests
 
 on:
   schedule:
-    # Uruchamiaj co godzinę (o pełnej godzinie)
-    - cron: "0 * * * *"
+    # Uruchamiaj co 4 godziny (o pełnej godzinie)
+    - cron: "0 */4 * * *"
   # Pozwala na ręczne uruchomienie z zakładki Actions
   workflow_dispatch:
 
