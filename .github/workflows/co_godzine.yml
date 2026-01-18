@@ -9,7 +9,7 @@ on:
 
 jobs:
   test:
-    timeout-minutes: 5
+    timeout-minutes: 10
     runs-on: windows-latest
     steps:
       - name: Pobranie kodu
