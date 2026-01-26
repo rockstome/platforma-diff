@@ -24,3 +24,14 @@ const haslo = process.env.PLATFORMA_HASLO;
     await expect(page).toHaveScreenshot({ fullPage: true });
   });
 });
+
+test(`checking usos`, async ({ page }) => {
+  await page.goto("https://usoscas.polsl.pl/cas/login?locale=pl");
+  await page.getByRole("textbox", { name: "Identyfikator" }).fill("ts316056");
+  await page.getByRole("textbox", { name: "Hasło" }).fill(haslo as string);
+  await page.getByRole("button", { name: "Zaloguj się" }).click();
+  await page.goto(
+    "https://usosweb.polsl.pl/kontroler.php?_action=dla_stud/studia/oceny/index",
+  );
+  await expect(page).toHaveScreenshot({ fullPage: true });
+});
