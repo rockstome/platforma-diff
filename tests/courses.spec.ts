@@ -4,12 +4,11 @@ import { test, expect } from "@playwright/test";
 const haslo = process.env.PLATFORMA_HASLO;
 
 [
-  "Informacja i kompresja danych 2025/26 (informatyka, niestacjonarne, st. I, sem",
-  "Systemy operacyjne 2025/26 (Informatyka, stacjonarne, st. I, sem. 3)",
-  "Algorytmy i struktury danych (Informatyka st. I sem. 3, studia niestacjonarne)",
-  "Języki skryptowe (Informatyka st. I sem. 3, studia niestacjonarne)",
-  "MN-niestacjonarne-2025_26",
-  "Programowanie III (Informatyka st. I sem. 3, studia niestacjonarne)",
+  "Bazy_danych_Inf_NieS",
+  "Rachunek prawdopodobieństwa i statystyka 2025/26 (informatyka, niestacjonarne, st. I, sem. 5)",
+  "Zarządzanie systemami informatycznymi 2025/2026 (Informatyka, studia niestacjonarne, st. I, sem. 4)",
+  "Matematyka Dyskretna 2025/26 (informatyka, niestacjonarne, st. I, sem. 4)",
+  "Systemy sztucznej inteligencji (Informatyka st. I sem. 4, studia niestacjonarne)"
 ].forEach((course) => {
   test(`checking course: '${course}'`, async ({ page }) => {
     await page.goto("https://platforma.polsl.pl/rms/");
@@ -33,5 +32,7 @@ test(`checking usos`, async ({ page }) => {
   await page.goto(
     "https://usosweb.polsl.pl/kontroler.php?_action=dla_stud/studia/oceny/index",
   );
+  await page.getByRole("button", { name: "Semestr letni 2025/2026" }).click();
+  await page.getByRole("button", { name: "Semestr letni 2026/2027" }).click();
   await expect(page).toHaveScreenshot({ fullPage: true });
 });
