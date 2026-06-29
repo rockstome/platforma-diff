@@ -5,7 +5,7 @@ const haslo = process.env.PLATFORMA_HASLO;
 
 [
   "Bazy_danych_Inf_NieS",
-  "Rachunek prawdopodobieństwa i statystyka 2025/26 (informatyka, niestacjonarne, st. I, sem. 5)",
+  // "Rachunek prawdopodobieństwa i statystyka 2025/26 (informatyka, niestacjonarne, st. I, sem. 5)",
   "Zarządzanie systemami informatycznymi 2025/2026 (Informatyka, studia niestacjonarne, st. I, sem. 4)",
   //"Matematyka Dyskretna 2025/26 (informatyka, niestacjonarne, st. I, sem. 4)",
   "Systemy sztucznej inteligencji (Informatyka st. I sem. 4, studia niestacjonarne)"
