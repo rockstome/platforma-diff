@@ -20,6 +20,12 @@ const haslo = process.env.PLATFORMA_HASLO;
     await page.getByRole("button", { name: "Zaloguj się" }).click();
     await page.getByRole("link", { name: course }).click();
     await page.getByRole("menuitem", { name: "Oceny" }).click();
+    await page.evaluate(() => {
+      const element = document.querySelector('#usernavigation');
+      if (element) {
+        element.remove();
+      }
+    });
     await expect(page).toHaveScreenshot({ fullPage: true });
   });
 });
